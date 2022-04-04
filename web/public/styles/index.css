@@ -1,0 +1,39 @@
+@import "global.css";
+
+.hero-header {
+  width: 100vw;
+  overflow: hidden;
+  height: 80vh;
+  padding: 0;
+}
+
+#product-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  height: 400px;
+  align-items: center;
+}
+
+@media (max-width: 800px) {
+  #product-gallery {
+    flex-direction: column;
+  }
+
+  .product-gallery-item {
+    margin: 10px;
+  }
+}
+
+.product-gallery-item {
+  width: 200px;
+  height: 250px;
+  padding: 20px;
+  /*box-shadow: 10px 5px 2px gray;*/
+  border: 1px solid black;
+  border-radius: 10%
+}
+.product-gallery-item-image {
+  width: 200px;
+  height: 200px;
+}

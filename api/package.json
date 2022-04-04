@@ -1,0 +1,12 @@
+{
+  "name": "ZEIT3119 Web API",
+  "version": "1.0.0",
+  "author": "Ryan MIllard-Cartwright <z5307994@ad.unsw.edu.au>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
