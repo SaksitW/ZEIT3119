@@ -1,5 +1,3 @@
-FROM httpd:2.4
+FROM nginx:alpine
 
-WORKDIR /usr/local/apache2/htdocs/
-
-COPY ./public .
+COPY . /usr/share/nginx/html

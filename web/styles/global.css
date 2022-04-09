@@ -1,0 +1,32 @@
+:root {
+  --main-background-color: #161116;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--main-background-color);
+  color: white;
+}
+
+nav {
+  top: 0;
+  position: sticky;
+  height: 80px;
+  background-color: var(--main-background-color);
+  padding-top: 1px;
+  padding-left: 40px;
+  color: white;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.footer-divider {
+  position: absolute;
+  width: 100vw;
+}

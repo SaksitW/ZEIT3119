@@ -6,8 +6,6 @@ services:
       - "3306:3306"
     networks:
       - backend
-    volumes:
-      - db_data:${DATABASE_LOCATION}/database
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=admin
@@ -23,16 +21,14 @@ services:
       - backend
     depends_on:
       - "db"
+    restart: always
 
   website:
     build: ./web/
     ports:
-      - "8080:80"
+      - "80:80"
     networks:
       - frontend
-
-volumes:
-  db_data: {}
 
 networks:
   frontend: {}
