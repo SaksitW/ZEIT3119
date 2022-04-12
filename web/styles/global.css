@@ -13,11 +13,11 @@ body {
 nav {
   top: 0;
   position: sticky;
-  height: 80px;
   background-color: var(--main-background-color);
-  padding-top: 1px;
-  padding-left: 40px;
   color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px;
 }
 
 .container {

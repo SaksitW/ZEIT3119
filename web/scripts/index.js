@@ -1,3 +1,5 @@
+import { getImagePath } from './common'
+
 window.onload = function load() {
   populateProducts();
 }
@@ -13,11 +15,9 @@ const testProducts = [
 async function populateProducts() {
   const galleryRef = document.getElementById("products");
 
+  // IMPORTANT
   const resp = await fetch("http://localhost:3000/");
-  console.log(resp);
-
   const products = await resp.json();
-  console.log(products);
 
   products.forEach((product) => {
     const newProductRef = document.createElement("div");
@@ -25,7 +25,7 @@ async function populateProducts() {
 
     // Create and append the image
     const productImage = document.createElement("img");
-    productImage.src = `images/products/fishing-rod.jpeg` //${nameToSlug(product.name)}`;
+    productImage.src = getImagePath(product.name);
     productImage.className = "product-image";
     newProductRef.appendChild(productImage);
 
@@ -38,4 +38,3 @@ async function populateProducts() {
   });
 }
 
-const nameToSlug = (name) => name.toLowerCase().replace(' ', '-');
